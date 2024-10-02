@@ -11,7 +11,7 @@ import com.turing.alan.cpifp.R
 import com.turing.alan.cpifp.data.ChampionsRepository
 import com.turing.alan.cpifp.data.InMemoryChampionsRepository
 import com.turing.alan.cpifp.databinding.ActivityMainBinding
-
+//trabajo de Boris Gallego Ríos
 class MainActivity : AppCompatActivity() {
     val instancia:ChampionsRepository=InMemoryChampionsRepository.getInstance()
     private lateinit var binding:ActivityMainBinding
