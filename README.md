@@ -1,4 +1,4 @@
-# Proyecto de Champions en Android
+# Proyecto de LOLChampions
 
 ## Descripción
 
