@@ -13,7 +13,7 @@ class ChampionAdapter(private val championList:List<Champion>):RecyclerView.Adap
         fun bind(campeon: Champion){
             binding.nombre.text=campeon.name
             binding.lore.text=campeon.lore
-            binding.titulo.text=campeon.lore
+            binding.titulo.text=campeon.title
         }
     }
 
