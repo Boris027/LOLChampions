@@ -1,9 +1,13 @@
+import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 }
 
 android {
+
+
     namespace = "com.turing.alan.cpifp"
     compileSdk = 34
 
@@ -37,6 +41,7 @@ android {
         viewBinding = true
     }
 }
+
 
 dependencies {
 
