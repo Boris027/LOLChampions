@@ -36,7 +36,7 @@ class TaskListFragment : Fragment() {
     }
 
     fun toitemDetail(campeon:Champion){
-        Toast.makeText(context, campeon.id.toString(), Toast.LENGTH_LONG).show()
+        //Toast.makeText(context, campeon.id.toString(), Toast.LENGTH_LONG).show()
         val action=TaskListFragmentDirections.actionTaskListFragmentToChampiondetail(campeon.id)
         findNavController().navigate(action)
     }
