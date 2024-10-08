@@ -10,17 +10,19 @@ import com.turing.alan.cpifp.R
 import com.turing.alan.cpifp.data.Champion
 import com.turing.alan.cpifp.databinding.ChampionviewBinding
 
-class ChampionAdapter(private val championList:List<Champion>):RecyclerView.Adapter<ChampionAdapter.ChampionViewHolder>() {
+class ChampionAdapter(private val championList:List<Champion>, private val toItemDetail:((Champion)->Unit)):RecyclerView.Adapter<ChampionAdapter.ChampionViewHolder>() {
 
-    class ChampionViewHolder(private val binding: ChampionviewBinding):RecyclerView.ViewHolder(binding.root){
+    inner class ChampionViewHolder(private val binding: ChampionviewBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(campeon: Champion){
             binding.imageview.load(campeon.imageUrl){
                 placeholder(R.drawable.imagen)
                 error(R.drawable.imagen)
             }
             binding.nombre.text=campeon.name
-            binding.lore.text=campeon.lore
             binding.titulo.text=campeon.title
+            binding.card.setOnClickListener{
+                toItemDetail(campeon)
+            }
         }
     }
 

@@ -13,7 +13,6 @@ import com.turing.alan.cpifp.data.InMemoryChampionsRepository
 import com.turing.alan.cpifp.databinding.ActivityMainBinding
 //trabajo de Boris Gallego Ríos
 class MainActivity : AppCompatActivity() {
-    val instancia:ChampionsRepository=InMemoryChampionsRepository.getInstance()
     private lateinit var binding:ActivityMainBinding
 
 
@@ -30,11 +29,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val recycleview=binding.champions
-        recycleview.layoutManager=LinearLayoutManager(this)
-        val championlist=instancia.getChampions()
-        val adapter=ChampionAdapter(championlist)
-        recycleview.adapter=adapter
+
 
     }
 }
