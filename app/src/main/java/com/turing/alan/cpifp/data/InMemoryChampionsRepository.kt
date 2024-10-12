@@ -1,6 +1,8 @@
 package com.turing.alan.cpifp.data
 
-class InMemoryChampionsRepository private constructor(): ChampionsRepository {
+import javax.inject.Inject
+
+class InMemoryChampionsRepository @Inject constructor(): ChampionsRepository {
 
     private var lista= listOf(Champion(
         1,
@@ -58,7 +60,7 @@ class InMemoryChampionsRepository private constructor(): ChampionsRepository {
     }
 
 
-    companion object {
+    /*companion object {
         // Instancia única del repositorio
         @Volatile
         private var instance: ChampionsRepository? = null
@@ -71,5 +73,5 @@ class InMemoryChampionsRepository private constructor(): ChampionsRepository {
         }
 
 
-    }
+    }*/
 }

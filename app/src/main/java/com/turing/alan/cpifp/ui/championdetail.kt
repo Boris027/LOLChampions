@@ -9,15 +9,17 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import coil.load
 import com.turing.alan.cpifp.R
+import com.turing.alan.cpifp.data.ChampionsRepository
 import com.turing.alan.cpifp.data.InMemoryChampionsRepository
 import com.turing.alan.cpifp.databinding.FragmentChampiondetailBinding
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class championdetail : Fragment() {
 
     private lateinit var binding:FragmentChampiondetailBinding
-    private val repository=InMemoryChampionsRepository.getInstance()
+    @Inject lateinit var repository:InMemoryChampionsRepository
     private val args:championdetailArgs by navArgs()
 
     override fun onCreateView(

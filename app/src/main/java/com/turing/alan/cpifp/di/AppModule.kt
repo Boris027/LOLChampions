@@ -1,6 +1,6 @@
 package com.turing.alan.cpifp.di
 
-import com.turing.alan.cpifp.data.Logger
+import com.turing.alan.cpifp.data.InMemoryChampionsRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,7 +11,7 @@ import dagger.hilt.components.SingletonComponent
 object AppModule {
 
     @Provides
-    fun provideLogger(): Logger {
-        return Logger() // Proporciona una instancia de Logger
+    fun provideLogger(): InMemoryChampionsRepository {
+        return InMemoryChampionsRepository() // Proporciona una instancia de Logger
     }
 }

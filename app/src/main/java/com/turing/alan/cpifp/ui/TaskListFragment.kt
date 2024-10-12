@@ -12,7 +12,7 @@ import com.turing.alan.cpifp.R
 import com.turing.alan.cpifp.data.Champion
 import com.turing.alan.cpifp.data.ChampionsRepository
 import com.turing.alan.cpifp.data.InMemoryChampionsRepository
-import com.turing.alan.cpifp.data.Logger
+
 import com.turing.alan.cpifp.databinding.ActivityMainBinding
 import com.turing.alan.cpifp.databinding.FragmentTaskListBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -20,10 +20,10 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class TaskListFragment : Fragment() {
-    val instancia: ChampionsRepository = InMemoryChampionsRepository.getInstance()
+    @Inject lateinit var instancia:InMemoryChampionsRepository
+
     private lateinit var binding: FragmentTaskListBinding
-    @Inject
-    lateinit var logger: Logger // Inyección de Logger
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,7 +41,7 @@ class TaskListFragment : Fragment() {
 
     fun toitemDetail(campeon:Champion){
         //Toast.makeText(context, campeon.id.toString(), Toast.LENGTH_LONG).show()
-        logger.log("hii")
+
         val action=TaskListFragmentDirections.actionTaskListFragmentToChampiondetail(campeon.id)
         findNavController().navigate(action)
     }
