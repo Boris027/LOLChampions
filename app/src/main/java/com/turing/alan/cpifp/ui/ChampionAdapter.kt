@@ -9,6 +9,8 @@ import coil.load
 import com.turing.alan.cpifp.R
 import com.turing.alan.cpifp.data.Champion
 import com.turing.alan.cpifp.databinding.ChampionviewBinding
+import dagger.hilt.android.AndroidEntryPoint
+
 
 class ChampionAdapter(private val championList:List<Champion>, private val toItemDetail:((Champion)->Unit)):RecyclerView.Adapter<ChampionAdapter.ChampionViewHolder>() {
 

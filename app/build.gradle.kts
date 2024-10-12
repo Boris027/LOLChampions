@@ -3,6 +3,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("androidx.navigation.safeargs.kotlin")
+    id("com.google.dagger.hilt.android")
+    id ("dagger.hilt.android.plugin")
+    id("kotlin-kapt")
 }
 
 android {
@@ -59,4 +62,14 @@ dependencies {
     implementation(libs.coil)
     implementation (libs.androidx.cardview)
     implementation(libs.androidx.fragment.ktx)
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+}
+
+kapt {
+    correctErrorTypes = true
+
+}
+hilt {
+    enableAggregatingTask = true
 }

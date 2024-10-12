@@ -11,7 +11,10 @@ import com.turing.alan.cpifp.R
 import com.turing.alan.cpifp.data.ChampionsRepository
 import com.turing.alan.cpifp.data.InMemoryChampionsRepository
 import com.turing.alan.cpifp.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
+
 //trabajo de Boris Gallego Ríos
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding
 

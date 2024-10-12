@@ -11,8 +11,9 @@ import coil.load
 import com.turing.alan.cpifp.R
 import com.turing.alan.cpifp.data.InMemoryChampionsRepository
 import com.turing.alan.cpifp.databinding.FragmentChampiondetailBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class championdetail : Fragment() {
 
     private lateinit var binding:FragmentChampiondetailBinding
